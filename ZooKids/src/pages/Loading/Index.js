@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import {useState} from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins'
+import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+
 
 import styles from './styles';
 
@@ -20,8 +20,8 @@ export default function Loading() {
   }
 
   function loading(){
-    setTimeout(() => {
-      navigation.navigate('Initial');
+    setTimeout(() => {  
+      navigation.navigate('Initial');      
     }, 2000)
   }
   loading();

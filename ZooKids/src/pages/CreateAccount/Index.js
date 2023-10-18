@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, createRef } from 'react';
 import { Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins'
+import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import { AsyncStorage } from 'AsyncStorage';
 
 import styles from './styles';
 
@@ -29,6 +30,15 @@ export default function CreateAccount() {
 
   if(!fontLoaded){
     return null;
+  }
+  
+  const registrar = () => {
+
+    AsyncStorage.setItem('nome', textOne);
+    AsyncStorage.setItem('email', textTwo);
+    AsyncStorage.setItem('senha', textThree);
+
+    navigation.navigate('Welcome');
   }
 
   return (
@@ -70,7 +80,7 @@ export default function CreateAccount() {
                     secureTextEntry={true}
                 />
 
-                <TouchableOpacity style={styles.buttonSignUp} onPress={ () => { navigation.navigate('Welcome') }}>
+                <TouchableOpacity style={styles.buttonSignUp} onPress={ () => { registrar() }}>
                     <Text style={styles.buttonSignUpText}>Cadastrar</Text>
                 </TouchableOpacity>
 
