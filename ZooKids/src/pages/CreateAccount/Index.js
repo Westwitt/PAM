@@ -4,6 +4,7 @@ import { Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import { AsyncStorage } from 'AsyncStorage';
+import * as Animatable from 'react-native-animatable';
 
 import styles from './styles';
 
@@ -41,6 +42,24 @@ export default function CreateAccount() {
     navigation.navigate('Welcome');
   }
 
+  const toTop = {
+    from: {
+      bottom: -20
+    },
+    to: {
+      bottom: 0,
+    }
+  };
+
+  const toBottom = {
+    from: {
+      bottom: 0
+    },
+    to: {
+      bottom: -20,
+    }
+  };
+
   return (
     <View style={styles.container}>
         <Image source={ require('../../../assets/imgs/frog.png') } style={styles.ilustration}/>
@@ -49,7 +68,15 @@ export default function CreateAccount() {
         </View>
         <View style={styles.formWrapper}>
             <View style={styles.form}>
-                <Text style={isFocusedOne || textOne ? [styles.inputText, { bottom: 0 }] : styles.inputText} onPress={() => inputRefOne.current.focus()}><Image source={require("../../../assets/imgs/person.png")} style={styles.icon} />Nome</Text>
+                <Animatable.Text
+                  animation={isFocusedOne || textOne ? toTop : toBottom} 
+                  duration={200} 
+                  delay={500} 
+                  style={isFocusedOne || textOne ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
+                  onPress={() => inputRefOne.current.focus()}>
+                    <Image source={require("../../../assets/imgs/person.png")} style={styles.icon} />
+                      Nome
+                </Animatable.Text>
                 <TextInput 
                     style={styles.input}
                     keyboardType='default'
@@ -58,8 +85,15 @@ export default function CreateAccount() {
                     onChangeText={newText => setTextOne(newText)}
                     ref={inputRefOne}
                 />
-
-                <Text style={isFocusedTwo || textTwo ? [styles.inputText, { bottom: 0 }] : styles.inputText} onPress={() => inputRefTwo.current.focus()}><Image source={require("../../../assets/imgs/mail.png")} style={styles.icon} />E-mail</Text>
+                <Animatable.Text 
+                  animation={isFocusedTwo || textTwo ? toTop : toBottom} 
+                  duration={200} 
+                  delay={500} 
+                  style={isFocusedTwo || textTwo ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
+                  onPress={() => inputRefTwo.current.focus()}>
+                    <Image source={require("../../../assets/imgs/mail.png")} style={styles.icon} />
+                      E-mail
+                </Animatable.Text>
                 <TextInput 
                     style={styles.input}
                     keyboardType='default'
@@ -69,7 +103,16 @@ export default function CreateAccount() {
                     ref={inputRefTwo}
                 />
 
-                <Text style={isFocusedThree || textThree ? [styles.inputText, { bottom: 0 }] : styles.inputText} onPress={() => inputRefThree.current.focus()}><Image source={require("../../../assets/imgs/lock.png")} style={styles.icon} />Senha</Text>
+                <Animatable.Text 
+                  animation={isFocusedThree || textThree ? toTop : toBottom} 
+                  duration={200} 
+                  delay={500} 
+                  style={isFocusedThree || textThree ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
+                  onPress={() => inputRefThree.current.focus()}>
+                    <Image source={require("../../../assets/imgs/lock.png")} style={styles.icon} />
+                      Senha
+                </Animatable.Text>
+
                 <TextInput 
                     style={styles.input}
                     keyboardType='default'
