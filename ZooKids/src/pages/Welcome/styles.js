@@ -13,21 +13,21 @@ export default StyleSheet.create({
         position: 'relative',
       },
     title:{
-        fontSize: 35,
+        fontSize: 30,
         color: '#0f6c58',
         fontFamily: 'Poppins_600SemiBold',
         textAlign: 'center',
         marginTop: '-5%',
     },
     desc:{
-        fontSize: 25,
+        fontSize: 17,
         lineHeight: 30,
         fontFamily: 'Poppins_400Regular',
         textAlign: 'center',
         marginHorizontal: 25,
     },
     main:{
-        fontSize: 35,
+        fontSize: 30,
         lineHeight: 30,
         color: '#0f6c58',
         fontFamily: 'Poppins_600SemiBold',
@@ -48,7 +48,7 @@ export default StyleSheet.create({
         marginHorizontal: 'auto',
     },
     textRead:{
-        fontSize: 20,
+        fontSize: 16,
         lineHeight: 15,
         color: '#FFFFFF',
         fontFamily: 'Poppins_600SemiBold',
@@ -66,11 +66,16 @@ export default StyleSheet.create({
         marginHorizontal: 'auto',
     },
     textLeave:{
-        fontSize: 20,
+        fontSize: 16,
         lineHeight: 15,
         color: '#f7826d',
         fontFamily: 'Poppins_600SemiBold',
         textAlign: 'center',
+    },
+    notifications: {
+        height: '20vh',
+        display: 'flex',
+        justifyContent: 'space-between',
     }
   });
   

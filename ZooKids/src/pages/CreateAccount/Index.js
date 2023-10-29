@@ -70,8 +70,8 @@ export default function CreateAccount() {
             <View style={styles.form}>
                 <Animatable.Text
                   animation={isFocusedOne || textOne ? toTop : toBottom} 
-                  duration={200} 
-                  delay={500} 
+                  duration={100} 
+                  delay={0} 
                   style={isFocusedOne || textOne ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
                   onPress={() => inputRefOne.current.focus()}>
                     <Image source={require("../../../assets/imgs/person.png")} style={styles.icon} />
@@ -87,8 +87,8 @@ export default function CreateAccount() {
                 />
                 <Animatable.Text 
                   animation={isFocusedTwo || textTwo ? toTop : toBottom} 
-                  duration={200} 
-                  delay={500} 
+                  duration={100} 
+                  delay={0} 
                   style={isFocusedTwo || textTwo ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
                   onPress={() => inputRefTwo.current.focus()}>
                     <Image source={require("../../../assets/imgs/mail.png")} style={styles.icon} />
@@ -105,8 +105,8 @@ export default function CreateAccount() {
 
                 <Animatable.Text 
                   animation={isFocusedThree || textThree ? toTop : toBottom} 
-                  duration={200} 
-                  delay={500} 
+                  duration={100} 
+                  delay={0} 
                   style={isFocusedThree || textThree ? [styles.inputText, { bottom: 0 }] : styles.inputText} 
                   onPress={() => inputRefThree.current.focus()}>
                     <Image source={require("../../../assets/imgs/lock.png")} style={styles.icon} />

@@ -29,9 +29,11 @@ export default function Welcome() {
     <View style={styles.container}>
         <Image source={ require('../../../assets/imgs/logo-green.png') } style={ styles.logo } />
         <Text style={styles.title}>Bem-vindo, {nome}</Text>
-        <Text style={styles.desc}>Desde a última vez em que você entrou, você ganhou:</Text>
-        <Text style={styles.main}>9</Text>
-        <Text style={styles.desc}>notificações. Deseja checá-las?</Text>
+        <View style={styles.notifications}>
+          <Text style={styles.desc}>Desde a última vez em que você entrou, você recebeu:</Text>
+          <Text style={styles.main}>9</Text>
+          <Text style={styles.desc}>notificações. Deseja checá-las?</Text>          
+        </View>
 
         <View style={styles.opacities}>
             <TouchableOpacity style={styles.read}>
