@@ -39,7 +39,7 @@ export default function Welcome() {
             <TouchableOpacity style={styles.read}>
                 <Text style={styles.textRead}>Ler as notificações</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.leave}>
+            <TouchableOpacity style={styles.leave} onPress={() => navigation.navigate('Tabs')}>
                 <Text style={styles.textLeave}>Ir para o Menu</Text>
             </TouchableOpacity>
         </View>
