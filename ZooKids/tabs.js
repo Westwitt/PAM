@@ -48,6 +48,7 @@ const Tabs = () => {
     }
   return (
     <Tab.Navigator
+      initialRouteName="Home"
       tabBarOptions={{
         showLabel: false
       }}
