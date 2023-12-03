@@ -92,7 +92,8 @@ export default StyleSheet.create({
       borderStyle: 'solid',
       position: 'absolute',
       top: 16,
-      right: 16
+      right: 16,
+      borderRadius: 6
     },
     signoutText: {
       fontFamily: 'Poppins_600SemiBold',
