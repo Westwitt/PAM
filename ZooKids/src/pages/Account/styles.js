@@ -84,5 +84,20 @@ export default StyleSheet.create({
       fontFamily: 'Poppins_400Regular',
       color: '#ABABAA'
     },
+    signout: {
+      paddingVertical: 5,
+      paddingHorizontal: 10,
+      borderWidth: 2,
+      borderColor: '#f00',
+      borderStyle: 'solid',
+      position: 'absolute',
+      top: 16,
+      right: 16
+    },
+    signoutText: {
+      fontFamily: 'Poppins_600SemiBold',
+      color: '#f00',
+      letterSpacing: 1
+    }
   });
   
