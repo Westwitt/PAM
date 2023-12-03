@@ -1,14 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Text, View, Image } from 'react-native';
+import React, { useRef } from 'react';
+import { Image, View, Animated } from 'react-native';
+import { PanGestureHandler } from 'react-native-gesture-handler';
 
-import styles from './styles';
+const MapScreen = () => {
+ const translateX = useRef(new Animated.Value(0)).current;
+ const translateY = useRef(new Animated.Value(0)).current;
 
-export default function Places() {
-  return (
-    <View style={styles.container}>
-        <Text style={styles.title}>Lugares</Text>
-        <Image source={ require('../../../assets/imgs/logo-white.png') } style={ styles.ilustrationLogo } />
-    </View>
-  );
-}
+ const onGestureEvent = Animated.event(
+  [{ nativeEvent: { translationX: translateX, translationY: translateY } }],
+  { useNativeDriver: true },
+ );
+
+ return (
+  <View style={{ flex: 1 }}>
+    <PanGestureHandler onGestureEvent={onGestureEvent}>
+      <Animated.Image
+        style={{
+          width: '100%',
+          height: '100%',
+          transform: [{ translateX }, { translateY }],
+        }}
+        source={{ uri: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/34a42e114485041.603c8e648ace2.png' }}
+      />
+    </PanGestureHandler>
+  </View>
+ );
+};
+
+export default MapScreen;
