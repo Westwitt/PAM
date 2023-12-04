@@ -46,7 +46,7 @@ export const dados = [
         nome: "Brooding Mawlek",
         hp: 300,
         descricao:
-            "Eu ouço esta besta gritando às vezes enquanto eu perambulo pelas cavernas, embora eu nunca tenha colocado os olhos nela. Quem ou o que está chamando? Tanto quanto eu posso dizer, sua voz nunca é respondida.",
+            "Eu ouço esta besta gritando às vezes enquanto eu perambulo pelas cavernas, embora eu nunca tenha colocado os olhos nela. Quem ou o que está chamando?",
         frase2:
             "Criatura feroz, mas extremamente social. Torna-se agressivo se não for capaz de se misturar com sua própria espécie.",
         comportamentos: [
@@ -87,7 +87,7 @@ export const dados = [
         nome: "Brothers Oro & Mato",
         hp: 2010,
         descricao:
-            "Eu ouço esta besta gDeuses pelo trabalho e amarrados com pregos, Irmãos que juraram proteger os fracos, Mestres do solo sagrado, Ajudem-nos a encontrar o Deus que procuramos!ritando às vezes enquanto eu perambulo pelas cavernas, embora eu nunca tenha colocado os olhos nela. Quem ou o que está chamando? Tanto quanto eu posso dizer, sua voz nunca é respondida.",
+            "Irmãos que juraram proteger os fracos, Mestres do solo sagrado.",
         frase2: "Irmãos da unha, treinados em combate pelo Grande Nailsage.",
         comportamentos: [
             [
@@ -123,13 +123,13 @@ export const dados = [
         ],
     },
     {
-        imagem: "https://static.wikia.nocookie.net/hollowknight/images/4/42/B_Brooding_Mawlek2.png",
-        nome: "Brooding Mawlek",
-        hp: 300,
+        imagem: "https://static.wikia.nocookie.net/hollowknight/images/e/ea/B_Great_Nailsage_Sly.png",
+        nome: "Nailsage Sly",
+        hp: 1050,
         descricao:
-            "Eu ouço esta besta gritando às vezes enquanto eu perambulo pelas cavernas, embora eu nunca tenha colocado os olhos nela. Quem ou o que está chamando? Tanto quanto eu posso dizer, sua voz nunca é respondida.",
+            "Lendário sábio das nail arts e, recentemente, comerciante de algum sucesso.",
         frase2:
-            "Criatura feroz, mas extremamente social. Torna-se agressivo se não for capaz de se misturar com sua própria espécie.",
+            "Sabiamente Deus da astúcia e ousadia, Afie Nossas unhas e mostre-Nos as probabilidades, ó maior dos mestres, Desejamos contemplar Aquele ainda maior, o Deus dos Deuses!",
         comportamentos: [
             [
                 "Slash",
@@ -150,8 +150,8 @@ export const dados = [
         ],
         galeria: [
             [
-                "Ataque de cuspir e cortar",
-                "https://static.wikia.nocookie.net/hollowknight/images/c/cd/Screenshot_HK_Brooding_Mawlek_01.png",
+                "Cyclone Slash",
+                "https://static.wikia.nocookie.net/hollowknight/images/3/39/Screenshot_HK_Great_Nailsage_Sly_02.png",
             ],
             [
                 "Ascended Arena na Godhome",
