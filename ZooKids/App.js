@@ -2,7 +2,6 @@ import React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
-
 import CreateAccount from './src/pages/CreateAccount/Index';
 import Login from './src/pages/Login/Index';
 import Initial from './src/pages/Initial/Index';
